@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ca-fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Protocole Domestique</title>
+        <script src="/client_web/main.js" type="application/javascript"></script>
+    </head>
+    <body>
+    <header>
+        <h1>Protocole domestique</h1>
+    </header>
+    <section id="section-init">
+        <button id="btnInit">R&eacute;initialiser la base de donn&eacute;e</button>
+    </section>
+    <section id="section-tache">
+        <h2>Module des t&acirc;ches</h2>
+        <table id="tableau-taches">
+            <caption>Liste des t&acirc;ches</caption>
+            <tr id="tableau-taches-entete">
+                <th>ID</th>
+                <th>Nom</th>
+                <th>&Eacute;ch&eacute;ance</th>
+                <th>Action</th>
+            </tr>
+            <tr id="tableau-tache-vide">
+                <td>0</td>
+                <td>Il n&apos;y a aucune t&acirc;che pour l&apos;instant</td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+        <form id="form-ajout-tache" action="/api/taches">
+            <label for="nom-tache">Nom de la t&acirc;che </label>
+            <input type="text" id="nom-tache" name="nom_tache">
+            <label for="echeance-tache">&Eacute;ch&eacute;ance de la t&acirc;che </label>
+            <input type="text" id="echeance-tache" name="due_pour">
+            <input type="submit" value="Ajouter">
+        </form>
+    </section>
+
+    </body>
+</html>
